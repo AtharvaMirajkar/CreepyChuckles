@@ -12,6 +12,8 @@ def get_joke():
     joke_data = response.json()
     if joke_data['type'] == 'single':
         return joke_data['joke']
+    elif joke_data['type'] == 'twopart':
+        return f"{joke_data['setup']} ... {joke_data['delivery']}"
 
 class MyClient(discord.Client):
     def __init__(self, **kwargs):
