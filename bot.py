@@ -4,6 +4,8 @@ import asyncio
 import os
 
 
+from keep_alive import keep_alive
+keep_alive()
 
 TOKEN = os.getenv("DISCORD_TOKEN")
 
